@@ -6,4 +6,7 @@ jobs:
         steps:
             - name: print hello
               run: echo "hello from github actions!"
+            - name: show current date 
+              run: date
+
 
