@@ -4,9 +4,13 @@ jobs:
     say-hello:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout the repo
+              uses: actions/checkout@v6
             - name: print hello
               run: echo "hello from github actions!"
             - name: show current date 
               run: date
+            - name: list repo files
+              run: ls -la
 
 
