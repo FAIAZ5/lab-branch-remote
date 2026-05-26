@@ -1,0 +1,12 @@
+name: PR Check Workflow
+on: 
+    pull_request:
+        branches:
+            - master
+
+jobs:
+    greet-pr:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Announce the PR
+              run: echo "A pull request was opened or updated against master!"
