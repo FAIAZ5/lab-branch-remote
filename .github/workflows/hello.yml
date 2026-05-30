@@ -6,6 +6,9 @@ on:
 jobs: 
     say-hello:
         runs-on: ubuntu-latest
+        env:
+          GREETING: "G'day from Sydney"
+          MY_NAME: "Faiaz"
         steps:
             - name: Checkout the repo
               uses: actions/checkout@v6
@@ -15,5 +18,5 @@ jobs:
               run: date
             - name: list repo files
               run: ls -la
-
-
+            - name: greet by name
+              run: echo "$GREETING, $MY_NAME!"
